@@ -5,8 +5,8 @@ shinyUI(fluidPage(
   
   sidebarLayout(
     sidebarPanel(
-      checkboxGroupInput("country", 
-                         label = h3("Country"), 
+      radioButtons("country", 
+                         label = h3("Select Country"), 
                          choices = list("Sierra Leone" = 1, 
                                         "Guinea" = 2, "Liberia" = 3),
                          selected = 1),
@@ -14,7 +14,6 @@ shinyUI(fluidPage(
                   choices = list("none"=1, "weekly" = 2, "monthly"=3), selected = 2),
       radioButtons("yscale", label = h3("Scale"),
                    choices = list("Linear" = 1, "Log" = 2),selected = 2),
-      submitButton("Update")
     ),
     
     mainPanel(
